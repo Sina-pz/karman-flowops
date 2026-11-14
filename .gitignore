@@ -1,0 +1,10 @@
+# private interview preparation, never published
+notes/
+
+# build and tooling
+build/
+.venv/
+__pycache__/
+*.pyc
+node_modules/
+.env
