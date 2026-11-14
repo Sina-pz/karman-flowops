@@ -231,7 +231,7 @@ A pull-request reviewer that knows this platform's rules.
 - **Limits:** it cannot approve or merge; it has a token budget; it runs only on branches of your own repository; it treats the diff as data, never as instructions.
 - **Measured.** Keep a folder of about twelve small sample diffs, eight with a planted violation and four clean. Report how many violations it caught and how many false alarms it raised.
 
-**C. Evaluation gate (in CI). Stretch goal.**
+**C. Evaluation gate (in CI). Stretch goal.** The recovery-agent replay from part A runs on a schedule or on a label, with a pinned model. The job fails if the recovery rate drops below the stored baseline by more than a set margin. Run each case three times to allow for model variation.
 
 **A third recording for the README:** a diverging run, the agent's plan with its evidence, the checker's verdict, and the run completing.
 
@@ -349,7 +349,7 @@ About six weeks of evenings (Phase 2.5 adds three to four days; the Phase 4 cut 
   - Why must the worker handle SIGTERM, and how does the grace period relate to the heartbeat timeout?
   - Why are Kafka, Temporal and Airflow not moved into the cluster here?
 
-### Phase 3: Airflow and the lake
+### Phase 3: Airflow and the lake (about 1 week)
 
 - Both DAGs from 5.4, Iceberg tables, DuckDB queries.
 - One notebook or dashboard page: failure rate by Reynolds number, cost per tenant.
@@ -438,7 +438,7 @@ You are helping the owner learn by building. The owner is a senior C++ developer
 
 1. Work on one phase at a time, in the order of section 8. Do not start a phase until the previous "Done when" list passes.
 2. Before writing code for a phase, state the plan in five to ten lines and wait for the owner's agreement.
-3. Explain each new concept in two or three sentences the first time it appears, then show the code. The owner should be able to answer that phase's "Check yourself" questions afterwards.
+3. Explain each new concept in three to five sentences, with one small example, the first time it appears, then show the code. The owner should be able to answer that phase's "Check yourself" questions afterwards.
 4. Prefer the smallest working version. Do not add features outside this file without asking.
 5. Check current official documentation for every library before using an API. Versions in section 7 are a starting point and some are marked "verify". If an API has changed, say so and update section 7.
 6. Keep workflow code deterministic. Any I/O, clock or randomness belongs in an activity.
