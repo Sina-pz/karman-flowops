@@ -19,7 +19,7 @@ Kickoff. No code yet.
 
 ## Open questions
 
-- Commit trailer: `Co-Authored-By: Claude` is the default. Owner can switch to name-only.
+- Commit trailer: resolved. Use `Co-Authored-By: Claude <noreply@anthropic.com>` (see D5 in `docs/decisions.md`).
 - Versions to verify before first use (section 7 of the plan): Airflow 3.4.0 and its Kafka, common-messaging and Amazon providers; Kafka 4.4.0 image tag; Temporal server 1.32 and CLI; `temporalio` 1.36; SeaweedFS licence and S3 gateway; Iceberg 1.12.0; PyIceberg SQL catalog and `upsert`; DuckDB reading Iceberg by metadata path; PostgreSQL version; Docker Desktop with WSL2; kind, Helm, kubectl.
 - Claim "no public project combines all three tools" is unchecked; do not publish it before searching GitHub.
 

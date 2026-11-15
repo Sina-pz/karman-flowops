@@ -25,7 +25,7 @@ Each entry says what was chosen, what was rejected, and why. This file feeds the
 
 ### D5: Private interview preparation stays out of the repo
 - **Chosen:** `notes/` is gitignored. The plan describes production practices in general terms.
-- **Commits:** carry a Claude co-author trailer by default. The owner can change this.
+- **Commits:** carry a Claude co-author trailer. Chosen form: `Co-Authored-By: Claude <noreply@anthropic.com>`, so GitHub lists "claude" as a co-author the same way as the owner's earlier commits. The model name is left out so the trailer stays the same across model changes. The owner can change this.
 
 ### D6: Kubernetes after Phase 2 (Phase 2.5), for our own workers only
 - **Chosen:** `kind` + Helm for worker, detector and sink. Kafka, Temporal, SeaweedFS, Postgres stay in Compose. Airflow is not running yet, so memory is available.
